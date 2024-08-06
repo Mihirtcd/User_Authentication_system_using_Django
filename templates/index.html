@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logged in user</title>
+</head>
+<body>
+    {% if user.is_authenticated %}
+      <p>Welcome {{ user.username }}</p>
+      <p>This is the best website on this planet and you are very lucky to access it</p>
+      <a href='/logout'>logout</a>
+    {% else %}
+      <p>You are not logged in. Please <a href='/login'>login</a>.</p>
+    {% endif %}
+  </body>
+</html>
